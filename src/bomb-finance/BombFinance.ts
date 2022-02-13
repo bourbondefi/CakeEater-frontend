@@ -28,6 +28,7 @@ export class BombFinance {
   boardroomVersionOfUser?: string;
 
   BOMBBTCB_LP: Contract;
+  WHISKEY: Contract;
   BOURBONCAKE: ERC20;
   BSHARE: ERC20;
   BBOND: ERC20;
@@ -57,7 +58,7 @@ export class BombFinance {
 
     // Uniswap V2 Pair
     this.BOMBBTCB_LP = new Contract(externalTokens['BOURBONCAKE-CAKE-LP'][0], IUniswapV2PairABI, provider);
-
+    this.WHISKEY = new Contract(externalTokens['WHISKEY-BUSD-LP'][0], IUniswapV2PairABI, provider);
     this.config = cfg;
     this.provider = provider;
   }
@@ -403,10 +404,8 @@ export class BombFinance {
         tokenPrice = await this.getLPTokenPrice(token, this.BOURBONCAKE, true);
       } else if (tokenName === 'BSHARE-BNB-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.BSHARE, false);
-      } else if (tokenName === 'BSHARE-BNB-APELP') {
-        tokenPrice = await this.getApeLPTokenPrice(token, this.BSHARE, false);
       } else if (tokenName === 'WHISKEY-BUSD-LP') {
-        tokenPrice = await this.getApeLPTokenPrice(token, this.BOURBONCAKE, true);
+        tokenPrice = await this.getLPTokenPrice(token, this.BOURBONCAKE, true);
       } else {
         tokenPrice = await this.getTokenPriceFromPancakeswap(token);
         tokenPrice = (Number(tokenPrice) * Number(priceOfOneFtmInDollars)).toString();
