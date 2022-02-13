@@ -157,14 +157,14 @@ const Nav = () => {
               >
                 DAO
               </a>
-            {/*  <a
-                href="https://bomb.farm"
+              <a
+                href="https://bourbondefi.gitbook.io/bourbon-finance/"
                 className={'navLink ' + classes.link}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                AutoVaults
-              </a> */}
+                DOCS
+              </a> 
             </Box>
 
             <Box
