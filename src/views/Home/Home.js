@@ -34,7 +34,7 @@ const BackgroundImage = createGlobalStyle`
     background-color: #171923;
   }
 `;
-const TITLE = 'bomb.money | BTC pegged algocoin';
+const TITLE = 'BourbonDeFi';
 
 // const BackgroundImage = createGlobalStyle`
 //   body {
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
   const TVL = useTotalValueLocked();
-  const bombFtmLpStats = useLpStatsBTC('BOMB-BTCB-LP');
+  const bombFtmLpStats = useLpStatsBTC('BOURBONCAKE-CAKE-LP');
   const bShareFtmLpStats = useLpStats('BSHARE-BNB-LP');
   const bombStats = useBombStats();
   const bShareStats = usebShareStats();
@@ -69,18 +69,18 @@ const Home = () => {
   }
 
   const buyBombAddress =
-    //  'https://pancakeswap.finance/swap?inputCurrency=0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c&outputCurrency=' +
-    'https://app.bogged.finance/bsc/swap?tokenIn=0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c&tokenOut=' + bomb.address;
-  //https://pancakeswap.finance/swap?outputCurrency=0x531780FAcE85306877D7e1F05d713D1B50a37F7A';
+      'https://pancakeswap.finance/swap?inputCurrency=0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82&outputCurrency=' + bomb.address;
+  //  'https://app.bogged.finance/bsc/swap?tokenIn=0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c&tokenOut=' 
+  //https://pancakeswap.finance/swap?outputCurrency=0x37c3205E81D44770d6b9E5693094264C6aA4d6E1';
   const buyBShareAddress =
-    'https://app.bogged.finance/bsc/swap?tokenIn=BNB&tokenOut=0x531780FAcE85306877D7e1F05d713D1B50a37F7A';
+    'https://pancakeswap.finance/swap?outputCurrency=0x37c3205E81D44770d6b9E5693094264C6aA4d6E1';
   const bombLPStats = useMemo(() => (bombFtmLpStats ? bombFtmLpStats : null), [bombFtmLpStats]);
   const bshareLPStats = useMemo(() => (bShareFtmLpStats ? bShareFtmLpStats : null), [bShareFtmLpStats]);
   const bombPriceInDollars = useMemo(
     () => (bombStats ? Number(bombStats.priceInDollars).toFixed(2) : null),
     [bombStats],
   );
-  const bombPriceInBNB = useMemo(() => (bombStats ? Number(bombStats.tokenInFtm).toFixed(4) : null), [bombStats]);
+  const bombPriceInBNB = useMemo(() => (bombStats ? Number(bombStats.tokenInFtm).toFixed(2) : null), [bombStats]);
   const bombCirculatingSupply = useMemo(() => (bombStats ? String(bombStats.circulatingSupply) : null), [bombStats]);
   const bombTotalSupply = useMemo(() => (bombStats ? String(bombStats.totalSupply) : null), [bombStats]);
 
@@ -109,7 +109,7 @@ const Home = () => {
   );
   const tBondTotalSupply = useMemo(() => (tBondStats ? String(tBondStats.totalSupply) : null), [tBondStats]);
 
-  const bombLpZap = useZap({depositTokenName: 'BOMB-BTCB-LP'});
+  const bombLpZap = useZap({depositTokenName: 'BOURBONCAKE-CAKE-LP'});
   const bshareLpZap = useZap({depositTokenName: 'BSHARE-BNB-LP'});
 
   const [onPresentBombZap, onDissmissBombZap] = useModal(
@@ -120,7 +120,7 @@ const Home = () => {
         bombLpZap.onZap(zappingToken, tokenName, amount);
         onDissmissBombZap();
       }}
-      tokenName={'BOMB-BTCB-LP'}
+      tokenName={'BOURBONCAKE-CAKE-LP'}
     />,
   );
 
@@ -150,26 +150,26 @@ const Home = () => {
           sm={4}
           style={{display: 'flex', justifyContent: 'center', verticalAlign: 'middle', overflow: 'hidden'}}
         >
-          <img src={BombImage} alt="Bomb.money" style={{maxHeight: '240px'}} />
+          <img src={BombImage} alt="BourbonDefi" style={{maxHeight: '240px'}} />
         </Grid>
         {/* Explanation text */}
         <Grid item xs={12} sm={8}>
           <Paper>
             <Box p={4} style={{textAlign: 'center'}}>
-              <h2>Welcome to Bomb</h2>
+              <h2>Welcome to Bourbon Cake</h2>
               <p>
-                BOMB is an algocoin which is designed to follow the price of BTC. Enjoy high yields normally only found
-                on high risk assets, but with exposure to BTC instead!
+                Bourbon Cake is an algocoin which is designed to follow the price of CAKE. Enjoy high yields normally only found
+                on high risk assets, but with exposure to CAKE instead!
               </p>
               <p>
-                <strong>BOMB is pegged via algorithm to a 10,000:1 ratio to BTC. $100k BTC = $10 BOMB PEG</strong>
-                {/* Stake your BOMB-BTC LP in the Farm to earn BSHARE rewards. Then stake your earned BSHARE in the
-                Boardroom to earn more BOMB! */}
+                <strong>Bourbon Cake is pegged via algorithm to a 1:1 ratio to CAKE.</strong>
+                {/* Stake your BOURBONCAKE-CAKE LP in the Farm to earn BSHARE rewards. Then stake your earned BSHARE in the
+                Boardroom to earn more BOURBONCAKE! */}
               </p>
               <p>
                 <IconTelegram alt="telegram" style={{fill: '#dddfee', height: '15px'}} /> Join our{' '}
                 <a
-                  href="https://t.me/bombmoneybsc"
+                  href="https://t.me/bourbondao"
                   rel="noopener noreferrer"
                   target="_blank"
                   style={{color: '#dddfee'}}
@@ -182,19 +182,19 @@ const Home = () => {
           </Paper>
         </Grid>
 
-        <Grid container spacing={3}>
+       {/* <Grid container spacing={3}>
           <Grid item xs={12} sm={12} justify="center" style={{margin: '12px', display: 'flex'}}>
             <Alert variant="filled" severity="info">
-              <h2>BOMB STAKING IS LIVE!</h2>
+              <h2>BOURBONCAKE STAKING IS LIVE!</h2>
               <h4>
-                Get your xBOMB now by staking BOMB.{' '}
+                Get your xBOMB now by staking BOURBONCAKE.{' '}
                 <Button href="/xbomb" className="shinyButton" style={{margin: '10px'}}>
                   Get xBOMB
                 </Button>
               </h4>
             </Alert>
           </Grid>
-        </Grid>
+        </Grid> */}
 
         {/* TVL */}
         <Grid item xs={12} sm={4}>
@@ -223,7 +223,7 @@ const Home = () => {
                 style={{margin: '10px'}}
                 className={'shinyButton ' + classes.button}
               >
-                Buy BOMB
+                Buy BOURBON CAKE
               </Button>
               <Button
                 target="_blank"
@@ -237,18 +237,18 @@ const Home = () => {
           </Card>
         </Grid>
 
-        {/* BOMB */}
+        {/* BOURBONCAKE */}
         <Grid item xs={12} sm={4}>
           <Card>
             <CardContent align="center" style={{position: 'relative'}}>
               <Box mt={2}>
                 <CardIcon>
-                  <TokenSymbol symbol="BOMB" />
+                  <TokenSymbol symbol="BOURBONCAKE" />
                 </CardIcon>
               </Box>
               <Button
                 onClick={() => {
-                  bombFinance.watchAssetInMetamask('BOMB');
+                  bombFinance.watchAssetInMetamask('BOURBONCAKE');
                 }}
                 style={{position: 'absolute', top: '10px', right: '10px', border: '1px grey solid'}}
               >
@@ -256,14 +256,14 @@ const Home = () => {
                 <b>+</b>&nbsp;&nbsp;
                 <img alt="metamask fox" style={{width: '20px', filter: 'grayscale(100%)'}} src={MetamaskFox} />
               </Button>
-              <h2 style={{marginBottom: '10px'}}>BOMB</h2>
-              10,000 BOMB (1.0 Peg) =
+              <h2 style={{marginBottom: '10px'}}>BOURBON CAKE</h2>
+              1 Bourbon Cake (1.0 Peg) =
               <Box>
-                <span style={{fontSize: '30px', color: 'white'}}>{bombPriceInBNB ? bombPriceInBNB : '-.----'} BTC</span>
+                <span style={{fontSize: '30px', color: 'white'}}>{bombPriceInBNB ? bombPriceInBNB : '--.--'} CAKE</span>
               </Box>
               <Box>
                 <span style={{fontSize: '16px', alignContent: 'flex-start'}}>
-                  ${bombPriceInDollars ? roundAndFormatNumber(bombPriceInDollars, 2) : '-.--'} / BOMB
+                  ${bombPriceInDollars ? roundAndFormatNumber(bombPriceInDollars, 2) : '-.--'} / BOURBON CAKE
                 </span>
               </Box>
               <span style={{fontSize: '12px'}}>
@@ -334,10 +334,10 @@ const Home = () => {
                 </CardIcon>
               </Box>
               <h2 style={{marginBottom: '10px'}}>BBOND</h2>
-              10,000 BBOND
+              1 BBOND
               <Box>
                 <span style={{fontSize: '30px', color: 'white'}}>
-                  {tBondPriceInBNB ? tBondPriceInBNB : '-.----'} BTC
+                  {tBondPriceInBNB ? tBondPriceInBNB : '-.----'} CAKE
                 </span>
               </Box>
               <Box>
@@ -351,15 +351,15 @@ const Home = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6}>
+      {/*  <Grid item xs={12} sm={6}>
           <Card>
             <CardContent align="center">
               <Box mt={2}>
                 <CardIcon>
-                  <TokenSymbol symbol="BOMB-BTCB-LP" />
+                  <TokenSymbol symbol="BOURBONCAKE-CAKE-LP" />
                 </CardIcon>
               </Box>
-              <h2>BOMB-BTCB PancakeSwap LP</h2>
+              <h2>BOURBONCAKE-BTCB PancakeSwap LP</h2>
               <Box mt={2}>
                 <Button disabled onClick={onPresentBombZap} className="shinyButtonDisabledSecondary">
                   Zap In
@@ -367,7 +367,7 @@ const Home = () => {
               </Box>
               <Box mt={2}>
                 <span style={{fontSize: '26px'}}>
-                  {bombLPStats?.tokenAmount ? bombLPStats?.tokenAmount : '-.--'} BOMB /{' '}
+                  {bombLPStats?.tokenAmount ? bombLPStats?.tokenAmount : '-.--'} BOURBONCAKE /{' '}
                   {bombLPStats?.ftmAmount ? bombLPStats?.ftmAmount : '-.--'} BTCB
                 </span>
               </Box>
@@ -409,8 +409,8 @@ const Home = () => {
               </span>
             </CardContent>
           </Card>
-        </Grid>
-      </Grid>
+        </Grid> */}
+      </Grid> 
     </Page>
   );
 };

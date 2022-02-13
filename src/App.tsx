@@ -59,9 +59,9 @@ const App: React.FC = () => {
             <Route path="/bond">
               <Bond />
             </Route>
-            <Route path="/xbomb">
+           {/* <Route path="/xbomb">
               <Xbomb />
-            </Route>
+            </Route> */}
             {/* <Route path="/sbs">
               <SBS />
             </Route> */}
@@ -92,8 +92,8 @@ const Providers: React.FC = ({children}) => {
             walletconnect: {rpcUrl: config.defaultProvider},
             walletlink: {
               url: config.defaultProvider,
-              appName: 'bomb.money',
-              appLogoUrl: 'https://raw.githubusercontent.com/bombmoney/bomb-assets/master/bomb-512.png',
+              appName: 'BourbonDefi',
+              appLogoUrl: 'https://raw.githubusercontent.com/bourbondefi/bomb-assets/master/bomb-512.png',
             },
           }}
         >

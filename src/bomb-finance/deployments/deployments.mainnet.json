@@ -1186,7 +1186,7 @@
     ]
   },
   "BBond": {
-    "address": "0xDA1d9C79240003195d0a67f202efcCCC3F78b994",
+    "address": "0xC56dFddee417Ff0Fb6A4be8906Aa7b8b9F08Fcfc",
     "abi": [
       {
         "inputs": [],
@@ -1631,7 +1631,7 @@
     ]
   },
   "BShare": {
-    "address": "0x531780FAcE85306877D7e1F05d713D1B50a37F7A",
+    "address": "0x37c3205E81D44770d6b9E5693094264C6aA4d6E1",
     "abi": [
       {
         "inputs": [
@@ -2332,7 +2332,7 @@
     ]
   },
   "BShareRewardPool": {
-    "address": "0x1083926054069AaD75d7238E9B809b0eF9d94e5B",
+    "address": "0x820F55B63123913eaAB0126C0963610Bd5F58e00",
     "abi": [
       {
         "inputs": [
@@ -2819,7 +2819,7 @@
   },
 
   "BshareBnbLPBShareRewardPool": {
-    "address": "0x1083926054069AaD75d7238E9B809b0eF9d94e5B",
+    "address": "0x820F55B63123913eaAB0126C0963610Bd5F58e00",
     "abi": [
       {
         "inputs": [
@@ -3306,7 +3306,7 @@
   },
 
   "BombBtcbApeLPBShareRewardPool": {
-    "address": "0x1083926054069AaD75d7238E9B809b0eF9d94e5B",
+    "address": "0x820F55B63123913eaAB0126C0963610Bd5F58e00",
     "abi": [
       {
         "inputs": [
@@ -3792,7 +3792,7 @@
     ]
   },
   "BshareBnbApeLPBShareRewardPool": {
-    "address": "0x1083926054069AaD75d7238E9B809b0eF9d94e5B",
+    "address": "0x820F55B63123913eaAB0126C0963610Bd5F58e00",
     "abi": [
       {
         "inputs": [
@@ -4278,7 +4278,7 @@
     ]
   },
   "BombBtcbLPBShareRewardPool": {
-    "address": "0x1083926054069AaD75d7238E9B809b0eF9d94e5B",
+    "address": "0x820F55B63123913eaAB0126C0963610Bd5F58e00",
     "abi": [
       {
         "inputs": [
@@ -4764,7 +4764,7 @@
     ]
   },
   "Boardroom": {
-    "address": "0xcAF7D9CE563E361A304FB6196499c1Dfd11b5991",
+    "address": "0x920CcDa0406fb3D3175f319821B692C4a7602be0",
     "abi": [
       {
         "anonymous": false,
@@ -5316,7 +5316,7 @@
     ]
   },
   "Bomb": {
-    "address": "0x522348779DCb2911539e76A1042aA922F9C47Ee3",
+    "address": "0x7d57d8d48059829f52db6de53190618f67aae32b",
     "abi": [
       {
         "inputs": [
@@ -9268,7 +9268,7 @@
     ]
   },
   "BombBnbLPRewardPool": {
-    "address": "0x04b79c851ed1A36549C6151189c79EC0eaBca745",
+    "address": "0xCBEd50b9E076b61685A3aF33d100cB7f8ad8765d",
     "abi": [
       {
         "inputs": [
@@ -9760,7 +9760,7 @@
   },
 
   "BombRewardPool": {
-    "address": "0x04b79c851ed1A36549C6151189c79EC0eaBca745",
+    "address": "0xCBEd50b9E076b61685A3aF33d100cB7f8ad8765d",
     "abi": [
       {
         "inputs": [
@@ -10251,7 +10251,7 @@
     ]
   },
   "BombBTCApeLPBombRewardPool": {
-    "address": "0x04b79c851ed1A36549C6151189c79EC0eaBca745",
+    "address": "0xCBEd50b9E076b61685A3aF33d100cB7f8ad8765d",
     "abi": [
       {
         "inputs": [
@@ -10742,7 +10742,7 @@
     ]
   },
   "BombBTCLPBombRewardPool": {
-    "address": "0x04b79c851ed1A36549C6151189c79EC0eaBca745",
+    "address": "0xCBEd50b9E076b61685A3aF33d100cB7f8ad8765d",
     "abi": [
       {
         "inputs": [
@@ -11233,7 +11233,7 @@
     ]
   },
   "Oracle": {
-    "address": "0x901a38448B254261cBaA960828BA8DeC08A28EFC",
+    "address": "0xAe1096E8C1D9473221283D1FC841f02D837bb5eE",
     "abi": [
       {
         "inputs": [
@@ -11638,7 +11638,7 @@
     ]
   },
   "TaxOracle": {
-    "address": "0x199E738848dD5305AE2EC5f8BD11011e0D9Fd9ed",
+    "address": "0xbf7F605Ba3013F1063166a44B13969c7f92Ac255",
     "abi": [
       {
         "inputs": [
@@ -11857,7 +11857,7 @@
     ]
   },
   "Treasury": {
-    "address": "0xcd6cD62F11F9417FBD44dc0a44F891fd3E869234",
+    "address": "0x99Ab5C66B40E558c354D77B506Fac4E8c541F32C",
     "abi": [
       {
         "anonymous": false,
@@ -13381,7 +13381,7 @@
   },
 
   "TaxOfficeV2": {
-    "address": "0x10283112b42991958f0D5fc24A8E8B76ce8346CF",
+    "address": "0x8ed16C4FAd59117b02a5e59610996E036e1dFCB2",
     "abi": [
       {
         "anonymous": false,

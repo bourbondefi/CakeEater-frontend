@@ -13,7 +13,7 @@ import {useMediaQuery} from '@material-ui/core';
 const AccountModal: React.FC<ModalProps> = ({onDismiss}) => {
   const bombFinance = useBombFinance();
 
-  const bombBalance = useTokenBalance(bombFinance.BOMB);
+  const bombBalance = useTokenBalance(bombFinance.BOURBONCAKE);
   const displayBombBalance = useMemo(() => getDisplayBalance(bombBalance, 18, 2), [bombBalance]);
 
   const bshareBalance = useTokenBalance(bombFinance.BSHARE);
@@ -33,10 +33,10 @@ const AccountModal: React.FC<ModalProps> = ({onDismiss}) => {
 
       <Balances style={{display: 'flex', flexDirection: matches ? 'row' : 'column'}}>
         <StyledBalanceWrapper style={{paddingBottom: '15px'}}>
-          <TokenSymbol symbol="BOMB" />
+          <TokenSymbol symbol="BOURBONCAKE" />
           <StyledBalance>
             <StyledValue>{displayBombBalance}</StyledValue>
-            <Label text="BOMB Available" />
+            <Label text="BCAKE Available" />
           </StyledBalance>
         </StyledBalanceWrapper>
 
@@ -45,13 +45,6 @@ const AccountModal: React.FC<ModalProps> = ({onDismiss}) => {
           <StyledBalance>
             <StyledValue>{displayBshareBalance}</StyledValue>
             <Label text="BSHARE Available" />
-          </StyledBalance>
-        </StyledBalanceWrapper>
-        <StyledBalanceWrapper style={{paddingBottom: '15px'}}>
-          <TokenSymbol symbol="XBOMB" />
-          <StyledBalance>
-            <StyledValue>{displayXbombBalance}</StyledValue>
-            <Label text="XBOMB Available" />
           </StyledBalance>
         </StyledBalanceWrapper>
         <StyledBalanceWrapper style={{paddingBottom: '15px'}}>

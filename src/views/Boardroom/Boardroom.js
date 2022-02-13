@@ -37,7 +37,7 @@ const BackgroundImage = createGlobalStyle`
     background-color: #171923;
   }
 `;
-const TITLE = 'bomb.money | Boardroom'
+const TITLE = 'BourbonDefi'
 
 const useStyles = makeStyles((theme) => ({
   gridItem: {
@@ -95,11 +95,11 @@ const Boardroom = () => {
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
                     <Typography style={{ textTransform: 'uppercase', color: '#f9d749' }}>
-                      BOMB PEG <small>(TWAP)</small>
+                      BCAKE PEG <small>(TWAP)</small>
                     </Typography>
-                    <Typography>{scalingFactor} BTC</Typography>
+                    <Typography>{scalingFactor} CAKE</Typography>
                     <Typography>
-                      <small>per 10,000 BOMB</small>
+                      <small>per 1 Bourbon Cake</small>
                     </Typography>
                   </CardContent>
                 </Card>

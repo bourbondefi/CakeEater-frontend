@@ -13,12 +13,12 @@ import bombFtmLpLogo from '../../assets/img/bomb-bitcoin-LP.png';
 import bshareFtmLpLogo from '../../assets/img/bshare-bnb-LP.png';
 
 import bnbLogo from '../../assets/img/bnb.png';
-import btcLogo from '../../assets/img/BCTB-icon.png';
+import btcLogo from '../../assets/img/CAKE.png';
 
 const logosBySymbol: {[title: string]: string} = {
   //Real tokens
   //=====================
-  BOMB: bombLogo,
+  BOURBONCAKE: bombLogo,
   BOMBPNG: bombLogoPNG,
   BSHAREPNG: tShareLogoPNG,
   XBOMB: xbombLogo,
@@ -28,17 +28,16 @@ const logosBySymbol: {[title: string]: string} = {
   BOO: bnbLogo,
   SHIBA: bnbLogo,
   ZOO: bnbLogo,
-  CAKE: bnbLogo,
   SUSD: bnbLogo,
   SBTC: btcLogo,
   BTCB: btcLogo,
-  BTC: btcLogo,
+  CAKE: btcLogo,
   SVL: bnbLogo,
-  'BOMB-BNB-LP': bombFtmLpLogo,
-  'BOMB-BTCB-LP': bombFtmLpLogo,
+  'BOURBONCAKE-BNB-LP': bombFtmLpLogo,
+  'BOURBONCAKE-CAKE-LP': bombFtmLpLogo,
   'BSHARE-BNB-LP': bshareFtmLpLogo,
   'BSHARE-BNB-APELP': bshareFtmLpLogo,
-  'BOMB-BTCB-APELP': bombFtmLpLogo,
+  'BOURBONCAKE-BTCB-APELP': bombFtmLpLogo,
 };
 
 type LogoProps = {

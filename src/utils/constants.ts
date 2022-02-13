@@ -1,4 +1,4 @@
-export const BOMB_TICKER = 'BOMB';
+export const BOMB_TICKER = 'BOURBONCAKE';
 export const BSHARE_TICKER = 'BSHARE';
 export const BBOND_TICKER = 'BBOND';
 export const BNB_TICKER = 'BNB';

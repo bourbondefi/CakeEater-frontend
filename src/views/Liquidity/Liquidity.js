@@ -26,7 +26,7 @@ const BackgroundImage = createGlobalStyle`
 function isNumeric(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
-const TITLE = 'bomb.money |'
+const TITLE = 'BourbonDefi'
 
 const ProvideLiquidity = () => {
   const [bombAmount, setBombAmount] = useState(0);
@@ -36,12 +36,12 @@ const ProvideLiquidity = () => {
   const bombStats = useBombStats();
   const bombFinance = useBombFinance();
   const [approveTaxOfficeStatus, approveTaxOffice] = useApproveTaxOffice();
-  const bombBalance = useTokenBalance(bombFinance.BOMB);
-  const btcBalance = useTokenBalance(bombFinance.BTC);
+  const bombBalance = useTokenBalance(bombFinance.BOURBONCAKE);
+  const btcBalance = useTokenBalance(bombFinance.CAKE);
 
   const ftmBalance = (btcBalance / 1e18).toFixed(4);
   const { onProvideBombFtmLP } = useProvideBombFtmLP();
-  const bombFtmLpStats = useLpStats('BOMB-BTCB-LP');
+  const bombFtmLpStats = useLpStats('BOURBONCAKE-CAKE-LP');
 
   const bombLPStats = useMemo(() => (bombFtmLpStats ? bombFtmLpStats : null), [bombFtmLpStats]);
   const bombPriceInBNB = useMemo(() => (bombStats ? Number(bombStats.tokenInFtm).toFixed(2) : null), [bombStats]);
@@ -54,7 +54,7 @@ const ProvideLiquidity = () => {
     }
     if (!isNumeric(e.currentTarget.value)) return;
     setBombAmount(e.currentTarget.value);
-    const quoteFromSpooky = await bombFinance.quoteFromSpooky(e.currentTarget.value, 'BOMB');
+    const quoteFromSpooky = await bombFinance.quoteFromSpooky(e.currentTarget.value, 'BOURBONCAKE');
     setFtmAmount(quoteFromSpooky);
     setLpTokensAmount(quoteFromSpooky / bombLPStats.ftmAmount);
   };
@@ -71,7 +71,7 @@ const ProvideLiquidity = () => {
     setLpTokensAmount(quoteFromSpooky / bombLPStats.tokenAmount);
   };
   const handleBombSelectMax = async () => {
-    const quoteFromSpooky = await bombFinance.quoteFromSpooky(getDisplayBalance(bombBalance), 'BOMB');
+    const quoteFromSpooky = await bombFinance.quoteFromSpooky(getDisplayBalance(bombBalance), 'BOURBONCAKE');
     setBombAmount(getDisplayBalance(bombBalance));
     setFtmAmount(quoteFromSpooky);
     setLpTokensAmount(quoteFromSpooky / bombLPStats.ftmAmount);
@@ -101,7 +101,7 @@ const ProvideLiquidity = () => {
               <a href="https://pancakeswap.finance/" rel="noopener noreferrer" target="_blank">
                 Pancakeswap
               </a>{' '}
-              are the only ways to provide Liquidity on BOMB-BTCB pair without paying tax.
+              are the only ways to provide Liquidity on BOURBONCAKE-BTCB pair without paying tax.
             </b>
           </Alert>
           <Grid item xs={12} sm={12}>
@@ -116,7 +116,7 @@ const ProvideLiquidity = () => {
                           onChange={handleBombChange}
                           value={bombAmount}
                           max={getDisplayBalance(bombBalance)}
-                          symbol={'BOMB'}
+                          symbol={'BOURBONCAKE'}
                         ></TokenInput>
                       </Grid>
                       <Grid item xs={12}>
@@ -129,8 +129,8 @@ const ProvideLiquidity = () => {
                         ></TokenInput>
                       </Grid>
                       <Grid item xs={12}>
-                        <p>1 BOMB = {bombPriceInBNB} BNB</p>
-                        <p>1 BNB = {ftmPriceInBOMB} BOMB</p>
+                        <p>1 BOURBONCAKE = {bombPriceInBNB} BNB</p>
+                        <p>1 BNB = {ftmPriceInBOMB} BOURBONCAKE</p>
                         <p>LP tokens ≈ {lpTokensAmount.toFixed(2)}</p>
                       </Grid>
                       <Grid xs={12} justifyContent="center" style={{ textAlign: 'center' }}>

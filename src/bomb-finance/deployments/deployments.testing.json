@@ -1,6 +1,6 @@
 {
   "BBond": {
-    "address": "0xDA1d9C79240003195d0a67f202efcCCC3F78b994",
+    "address": "0xC56dFddee417Ff0Fb6A4be8906Aa7b8b9F08Fcfc",
     "abi": [
       {
         "inputs": [],
@@ -2184,7 +2184,7 @@
     ]
   },
   "Bomb": {
-    "address": "0x522348779DCb2911539e76A1042aA922F9C47Ee3",
+    "address": "0x7d57d8d48059829f52db6de53190618f67aae32b",
     "abi": [
       {
         "inputs": [

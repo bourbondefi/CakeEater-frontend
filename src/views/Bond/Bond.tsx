@@ -32,7 +32,7 @@ const BackgroundImage = createGlobalStyle`
     background-color: #171923;
   }
 `;
-const TITLE = 'bomb.money | Bonds'
+const TITLE = 'BourbonDefi | Bonds'
 
 const Bond: React.FC = () => {
   const {path} = useRouteMatch();
@@ -52,7 +52,7 @@ const Bond: React.FC = () => {
     async (amount: string) => {
       const tx = await bombFinance.buyBonds(amount);
       addTransaction(tx, {
-        summary: `Buy ${Number(amount).toFixed(2)} BBOND with ${amount} BOMB`,
+        summary: `Buy ${Number(amount).toFixed(2)} BBOND with ${amount} BOURBONCAKE`,
       });
     },
     [bombFinance, addTransaction],
@@ -101,13 +101,13 @@ const Bond: React.FC = () => {
               <StyledCardWrapper>
                 <ExchangeCard
                   action="Purchase"
-                  fromToken={bombFinance.BOMB}
-                  fromTokenName="BOMB"
+                  fromToken={bombFinance.BOURBONCAKE}
+                  fromTokenName="BOURBONCAKE"
                   toToken={bombFinance.BBOND}
                   toTokenName="BBOND"
                   priceDesc={
                     !isBondPurchasable
-                      ? 'BOMB is over peg'
+                      ? 'BCAKE is over peg'
                       : getDisplayBalance(bondsPurchasable, 18, 4) + ' BBOND available for purchase'
                   }
                   onExchange={handleBuyBonds}
@@ -116,7 +116,7 @@ const Bond: React.FC = () => {
               </StyledCardWrapper>
               <StyledStatsWrapper>
                 <ExchangeStat
-                  tokenName="10,000 BOMB"
+                  tokenName="1 BOURBON CAKE"
                   description="Last-Hour TWAP Price"
                   //price={Number(bombStat?.tokenInFtm).toFixed(4) || '-'}
                  price={bondScale || '-'}
@@ -124,8 +124,8 @@ const Bond: React.FC = () => {
                 />
                 <Spacer size="md" />
                 <ExchangeStat
-                  tokenName="10,000 BBOND"
-                  description="Current Price: (BOMB)^2"
+                  tokenName="1 BBOND"
+                  description="Current Price: (BCAKE)^2"
                   price={Number(bondStat?.tokenInFtm).toFixed(4) || '-'}
                 />
               </StyledStatsWrapper>
@@ -134,12 +134,12 @@ const Bond: React.FC = () => {
                   action="Redeem"
                   fromToken={bombFinance.BBOND}
                   fromTokenName="BBOND"
-                  toToken={bombFinance.BOMB}
-                  toTokenName="BOMB"
+                  toToken={bombFinance.BOURBONCAKE}
+                  toTokenName="BOURBONCAKE"
                   priceDesc={`${getDisplayBalance(bondBalance)} BBOND Available in wallet`}
                   onExchange={handleRedeemBonds}
                   disabled={!bondStat || bondBalance.eq(0) || !isBondRedeemable}
-                  disabledDescription={!isBondRedeemable ? `Enabled when 10,000 BOMB > ${BOND_REDEEM_PRICE}BTC` : null}
+                  disabledDescription={!isBondRedeemable ? `Enabled when 1 BCAKE > ${BOND_REDEEM_PRICE}CAKE` : null}
                 />
               </StyledCardWrapper>
             </StyledBond>

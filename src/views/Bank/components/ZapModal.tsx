@@ -28,15 +28,15 @@ const ZapModal: React.FC<ZapProps> = ({onConfirm, onDismiss, tokenName = '', dec
   const bombFinance = useBombFinance();
   const {balance} = useWallet();
   const ftmBalance = (Number(balance) / 1e18).toFixed(4).toString();
-  const bombBalance = useTokenBalance(bombFinance.BOMB);
+  const bombBalance = useTokenBalance(bombFinance.BOURBONCAKE);
   const bshareBalance = useTokenBalance(bombFinance.BSHARE);
-  const btcBalance = useTokenBalance(bombFinance.BTC);
+  const btcBalance = useTokenBalance(bombFinance.CAKE);
   const [val, setVal] = useState('');
   const [zappingToken, setZappingToken] = useState(BNB_TICKER);
   const [zappingTokenBalance, setZappingTokenBalance] = useState(ftmBalance);
   const [estimate, setEstimate] = useState({token0: '0', token1: '0'}); // token0 will always be BNB in this case
   const [approveZapperStatus, approveZapper] = useApproveZapper(zappingToken);
-  const bombFtmLpStats = useLpStats('BOMB-BTCB-LP');
+  const bombFtmLpStats = useLpStats('BOURBONCAKE-CAKE-LP');
   const tShareFtmLpStats = useLpStats('BSHARE-BNB-LP');
   const bombLPStats = useMemo(() => (bombFtmLpStats ? bombFtmLpStats : null), [bombFtmLpStats]);
   const bshareLPStats = useMemo(() => (tShareFtmLpStats ? tShareFtmLpStats : null), [tShareFtmLpStats]);
@@ -92,9 +92,9 @@ const ZapModal: React.FC<ZapProps> = ({onConfirm, onDismiss, tokenName = '', dec
       <Select onChange={handleChangeAsset} style={{color: '#2c2560'}} labelId="label" id="select" value={zappingToken}>
         <StyledMenuItem value={BNB_TICKER}>BNB</StyledMenuItem>
         <StyledMenuItem value={BSHARE_TICKER}>BSHARE</StyledMenuItem>
-        {/* <StyledMenuItem value={BTC_TICKER}>BTC</StyledMenuItem> */}
+        {/* <StyledMenuItem value={BTC_TICKER}>CAKE</StyledMenuItem> */}
         {/* Bomb as an input for zapping will be disabled due to issues occuring with the Gatekeeper system */}
-        {/* <StyledMenuItem value={BOMB_TICKER}>BOMB</StyledMenuItem> */}
+        {/* <StyledMenuItem value={BOMB_TICKER}>BOURBONCAKE</StyledMenuItem> */}
       </Select>
       <TokenInput
         onSelectMax={handleSelectMax}

@@ -25,7 +25,7 @@ const BackgroundImage = createGlobalStyle`
   }
 `;
 
-const TITLE = 'bomb.money | Farms'
+const TITLE = 'BourbonDefi'
 
 
 const Farm = () => {

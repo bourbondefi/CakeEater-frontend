@@ -120,7 +120,7 @@ const Nav = () => {
             <Typography variant="h6" color="inherit" noWrap style={{flexGrow: '0'}} className={classes.toolbarTitle}>
               {/* <a className={ classes.brandLink } href="/">Bomb Money</a> */}
               <Link to="/" color="inherit" className={classes.brandLink}>
-                <img alt="bomb.money" src={bombLogo} height="60px" />
+                <img alt="BourbonDefi" src={bombLogo} height="60px" />
               </Link>
             </Typography>
             <Box style={{paddingLeft: '15px', fontSize: '1rem', flexGrow: '1'}}>
@@ -133,9 +133,9 @@ const Nav = () => {
               <Link to="/boardroom" className={'navLink ' + classes.link}>
                 Boardroom
               </Link>
-              <Link to="/xbomb" className={'navLink ' + classes.link}>
+             {/* <Link to="/xbomb" className={'navLink ' + classes.link}>
                 xBOMB
-              </Link>
+              </Link> */}
               <Link to="/bond" className={'navLink ' + classes.link}>
                 Bond
               </Link>
@@ -150,21 +150,21 @@ const Nav = () => {
                 Regulations
               </Link> */}
               <a
-                href="https://docs.bomb.money"
+                href="https://bourbondao.com/bonds"
                 className={'navLink ' + classes.link}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Docs
+                DAO
               </a>
-              <a
+            {/*  <a
                 href="https://bomb.farm"
                 className={'navLink ' + classes.link}
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 AutoVaults
-              </a>
+              </a> */}
             </Box>
 
             <Box
@@ -200,7 +200,7 @@ const Nav = () => {
             </IconButton>
 
             <img
-              alt="bomb.money"
+              alt="BourbonDefi"
               src={bombLogo}
               style={{height: '40px', marginTop: '-10px', marginLeft: '10px', marginRight: '15px'}}
             />

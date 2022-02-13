@@ -21,7 +21,7 @@ function useApproveZapper(zappingToken: string): [ApprovalState, () => Promise<v
   const bombFinance = useBombFinance();
   let token: ERC20;
   if (zappingToken === BNB_TICKER) token = bombFinance.BNB;
-  else if (zappingToken === BOMB_TICKER) token = bombFinance.BOMB;
+  else if (zappingToken === BOMB_TICKER) token = bombFinance.BOURBONCAKE;
   else if (zappingToken === BSHARE_TICKER) token = bombFinance.BSHARE;
   else if (zappingToken === BTC_TICKER) token = bombFinance.externalTokens[BTC_TICKER];
   const pendingApproval = useHasPendingApproval(token.address, ZAPPER_ROUTER_ADDR);

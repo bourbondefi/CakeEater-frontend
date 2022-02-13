@@ -39,7 +39,7 @@ const Bank: React.FC = () => {
   const statsOnPool = useStatsForPool(bank);
 
   let vaultUrl: string;
-  if (bank.depositTokenName.includes('BOMB')) {
+  if (bank.depositTokenName.includes('BOURBONCAKE')) {
     vaultUrl = 'https://www.bomb.farm/#/bsc/vault/bomb-bomb-btcb';
   } else {
     vaultUrl = 'https://www.bomb.farm/#/bsc/vault/bomb-bshare-wbnb';
@@ -53,7 +53,7 @@ const Bank: React.FC = () => {
         subtitle={`Deposit ${bank?.depositTokenName} and earn ${bank?.earnTokenName}`}
         title={bank?.name}
       />
-         <Box mt={5}>
+        {/* <Box mt={5}>
                 <Grid container justify="center" spacing={3} style={{ marginBottom: '30px' }}>
 
         <Alert variant="filled" severity="info">
@@ -62,8 +62,8 @@ const Bank: React.FC = () => {
             Check it out here: <a href={vaultUrl}>{vaultUrl}</a>
 
 
-        </Alert></Grid>
-        </Box>
+        </Alert> </Grid> 
+        </Box> */}
       <Box>
         <Grid container justify="center" spacing={3} style={{marginBottom: '50px'}}>
           <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
@@ -123,14 +123,14 @@ const Bank: React.FC = () => {
 
 const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
   const bombFinance = useBombFinance();
-  const bombAddr = bombFinance.BOMB.address;
+  const bombAddr = bombFinance.BOURBONCAKE.address;
   const bshareAddr = bombFinance.BSHARE.address;
 
   let pairName: string;
   let uniswapUrl: string;
  // let vaultUrl: string;
-  if (bank.depositTokenName.includes('BOMB')) {
-    pairName = 'BOMB-BTCB pair';
+  if (bank.depositTokenName.includes('BOURBONCAKE')) {
+    pairName = 'BOURBONCAKE-BTCB pair';
     uniswapUrl = 'https://pancakeswap.finance/add/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c/' + bombAddr;
  //   vaultUrl = 'https://www.bomb.farm/#/bsc/vault/bomb-bomb-btcb';
   } else {

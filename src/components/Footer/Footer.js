@@ -45,27 +45,27 @@ const Footer = () => {
             <Typography variant="body2" color="textPrimary" align="left">
               {'Copyright © '}
               <Link color="inherit" href="/">
-                Bomb Money
+                Bourbon Finance
               </Link>{' '}
               {new Date().getFullYear()}
             </Typography>
           </Grid>
           <Grid item xs={6} style={{textAlign: 'right', height: '20px'}}>
             <a
-              href="https://twitter.com/BombMoneyBSC"
+              href="https://twitter.com/financebourbon"
               rel="noopener noreferrer"
               target="_blank"
               className={classes.link}
             >
               <IconTwitter style={{fill: '#dddfee'}} />
             </a>
-            <a href="https://github.com/bombmoney" rel="noopener noreferrer" target="_blank" className={classes.link}>
+            <a href="https://github.com/bourbondefi" rel="noopener noreferrer" target="_blank" className={classes.link}>
               <IconGithub style={{fill: '#dddfee', height: '20px'}} />
             </a>
-            <a href="https://t.me/bombmoneybsc" rel="noopener noreferrer" target="_blank" className={classes.link}>
+            <a href="https://t.me/bourbondao" rel="noopener noreferrer" target="_blank" className={classes.link}>
               <IconTelegram style={{fill: '#dddfee', height: '20px'}} />
             </a>
-            <a href="http://discord.bomb.money/" rel="noopener noreferrer" target="_blank" className={classes.link}>
+            <a href="https://discord.gg/xjg7wdnUeT" rel="noopener noreferrer" target="_blank" className={classes.link}>
               <IconDiscord style={{fill: '#dddfee', height: '20px'}} />
             </a>
           </Grid>

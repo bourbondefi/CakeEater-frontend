@@ -26,7 +26,7 @@ const BackgroundImage = createGlobalStyle`
     background-color: #171923;
   }
 `;
-const TITLE = 'bomb.money | xBOMB - BOMB Staking'
+const TITLE = 'BourbonDefi'
 
 const useStyles = makeStyles((theme) => ({
   gridItem: {
@@ -66,15 +66,15 @@ const Staking = () => {
       {!!account ? (
         <>
           <Typography color="textPrimary" align="center" variant="h3" gutterBottom>
-            BOMB Staking for xBOMB
+            BOURBONCAKE Staking for xBOMB
           </Typography>
           <Grid container justify="center">
             <Box mt={3} style={{ width: '600px' }}>
               <Alert variant="filled" severity="info">
                 <b> Most rewards are generated from boardroom printing! Rewards come from:</b><br />
-                - 80% of autocompounder fees are used to buy BOMB on the open market<br />
-                - 20% of all BOMB minted - from protocol allocation, does not impact BSHARE boardroom printing.<br />
-                If TWAP of BOMB peg is not over 1.01, yield will be reduced.<br />
+                - 80% of autocompounder fees are used to buy BCAKE on the open market<br />
+                - 20% of all BCAKE minted - from protocol allocation, does not impact BSHARE boardroom printing.<br />
+                If TWAP of BCAKEpeg is not over 1.01, yield will be reduced.<br />
                 APR is based on performance since launch on January 24th, 2022.
               </Alert>
 
@@ -90,7 +90,7 @@ const Staking = () => {
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
                     <Typography style={{ textTransform: 'uppercase', color: '#f9d749' }}>1 xBOMB =</Typography>
-                    <Typography>{Number(xbombRate)} BOMB</Typography>
+                    <Typography>{Number(xbombRate)} BOURBONCAKE</Typography>
                   </CardContent>
                 </Card>
               </Grid>
@@ -98,11 +98,11 @@ const Staking = () => {
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
                     <Typography style={{ textTransform: 'uppercase', color: '#f9d749' }}>
-                      BOMB PEG <small>(TWAP)</small>
+                      BOURBONCAKE PEG <small>(TWAP)</small>
                     </Typography>
-                    <Typography>{scalingFactor} BTC</Typography>
+                    <Typography>{scalingFactor} CAKE</Typography>
                     <Typography>
-                      <small>per 10,000 BOMB</small>
+                      <small>per 10,000 BOURBONCAKE</small>
                     </Typography>
                   </CardContent>
                 </Card>
@@ -126,7 +126,7 @@ const Staking = () => {
               <Grid item xs={12} md={2} lg={2}>
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
-                    <Typography style={{ textTransform: 'uppercase', color: '#f9d749' }}>BOMB Staked</Typography>
+                    <Typography style={{ textTransform: 'uppercase', color: '#f9d749' }}>BOURBONCAKE Staked</Typography>
                     <Typography>{roundAndFormatNumber(bombTotalStaked)}</Typography>
                   </CardContent>
                 </Card>
@@ -134,7 +134,7 @@ const Staking = () => {
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
-                    <Typography style={{ textTransform: 'uppercase', color: '#f9d749' }}>BOMB Staked USD</Typography>
+                    <Typography style={{ textTransform: 'uppercase', color: '#f9d749' }}>BOURBONCAKE Staked USD</Typography>
                     <Typography>${roundAndFormatNumber(xbombTVL, 2)}</Typography>
                   </CardContent>
                 </Card>
@@ -169,9 +169,9 @@ const Staking = () => {
                       <Card>
                         <CardContent>
                           <h2>About xBOMB & Rewards</h2>
-                          <p><strong>We are currently depositing 10,000 BOMB per week into the staking pool until our BTC Single Staking service is launched.</strong></p>
+                          <p><strong>We are currently depositing 10,000 BOURBONCAKE per week into the staking pool until our CAKE Single Staking service is launched.</strong></p>
                           <p>xBOMB will be the governance token required to cast votes on protocol decisions.</p>
-                          <p>20% of all BOMB minted will be deposited into the xBOMB smart contract, increasing the amount of BOMB that can be redeemed for each xBOMB. Rewards will be deposited at random times to prevent abuse.</p>
+                          <p>20% of all BOURBONCAKE minted will be deposited into the xBOMB smart contract, increasing the amount of BOURBONCAKE that can be redeemed for each xBOMB. Rewards will be deposited at random times to prevent abuse.</p>
                           <p>Functionality will be developed around xBOMB including using it as collateral to borrow other assets.</p>
                           <p>Reward structure subject to change based on community voting.</p>
                         </CardContent>

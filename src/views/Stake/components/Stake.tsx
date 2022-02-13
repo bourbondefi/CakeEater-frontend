@@ -29,15 +29,15 @@ import useXbombBalance from '../../../hooks/useXbombBalance';
 
 const Stake: React.FC = () => {
   const bombFinance = useBombFinance();
-  const [approveStatus, approve] = useApprove(bombFinance.BOMB, bombFinance.contracts.xBOMB.address);
+  const [approveStatus, approve] = useApprove(bombFinance.BOURBONCAKE, bombFinance.contracts.xBOMB.address);
 
-  const tokenBalance = useTokenBalance(bombFinance.BOMB);
+  const tokenBalance = useTokenBalance(bombFinance.BOURBONCAKE);
   //const stakedBalance = useStakedBomb();
   const stakedBalance = useTokenBalance(bombFinance.XBOMB);
 
   const xbombBalance = useXbombBalance();
   const xbombRate = Number(xbombBalance) / 1000000000000000000;
-  const stakedTokenPriceInDollars = Number(useStakedTokenPriceInDollars('BOMB', bombFinance.BOMB)) * xbombRate;
+  const stakedTokenPriceInDollars = Number(useStakedTokenPriceInDollars('BOURBONCAKE', bombFinance.BOURBONCAKE)) * xbombRate;
   const xbombToBombEquivalent = Number(getDisplayBalance(stakedBalance)) * xbombRate;
 
   const tokenPriceInDollars = useMemo(
@@ -59,7 +59,7 @@ const Stake: React.FC = () => {
         onStake(value);
         onDismissDeposit();
       }}
-      tokenName={'BOMB'}
+      tokenName={'BOURBONCAKE'}
     />,
   );
 
@@ -104,7 +104,7 @@ const Stake: React.FC = () => {
               </Button>
               <Value value={getDisplayBalance(stakedBalance)} />
               <Label text={'xBOMB Balance'} variant="yellow" />
-              <Label text={`≈ ${xbombToBombEquivalent.toFixed(2)} BOMB / $${tokenPriceInDollars}`} variant="yellow" />
+              <Label text={`≈ ${xbombToBombEquivalent.toFixed(2)} BOURBONCAKE / $${tokenPriceInDollars}`} variant="yellow" />
             </StyledCardHeader>
             <StyledCardActions>
               {approveStatus !== ApprovalState.APPROVED ? (
@@ -114,7 +114,7 @@ const Stake: React.FC = () => {
                   style={{marginTop: '20px'}}
                   onClick={approve}
                 >
-                  Approve BOMB
+                  Approve BOURBONCAKE
                 </Button>
               ) : (
                 <>
