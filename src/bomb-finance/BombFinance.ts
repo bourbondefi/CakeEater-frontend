@@ -235,7 +235,7 @@ export class BombFinance {
 
   async getBombStatInEstimatedTWAP(): Promise<TokenStat> {
     const {Oracle, BombRewardPool} = this.contracts;
-    const expectedPrice = await Oracle.twap(this.BOURBONCAKE.address, ethers.utils.parseEther('10000'));
+    const expectedPrice = await Oracle.twap(this.BOURBONCAKE.address, ethers.utils.parseEther('1'));
 
     const supply = await this.BOURBONCAKE.totalSupply();
     const bombRewardPoolSupply = await this.BOURBONCAKE.balanceOf(BombRewardPool.address);
