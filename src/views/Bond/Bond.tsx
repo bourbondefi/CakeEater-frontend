@@ -69,7 +69,7 @@ const Bond: React.FC = () => {
   const isBondPurchasable = useMemo(() => Number(bondStat?.tokenInFtm) < 1.01, [bondStat]);
   const isBondPayingPremium = useMemo(() => Number(bondStat?.tokenInFtm) >= 1.1, [bondStat]);
 // console.log("bondstat", Number(bondStat?.tokenInFtm))
-  const bondScale = (Number(cashPrice) / 100000000000000).toFixed(4); 
+  const bondScale = (Number(cashPrice) / 1000000000000000000).toFixed(4); 
 
   return (
     <Switch>
@@ -126,7 +126,7 @@ const Bond: React.FC = () => {
                 <ExchangeStat
                   tokenName="1 BBOND"
                   description="Current Price: (BCAKE)^2"
-                  price={Number(bondStat?.tokenInFtm).toFixed(4) || '-'}
+                  price={bondScale || '-'}
                 />
               </StyledStatsWrapper>
               <StyledCardWrapper>
