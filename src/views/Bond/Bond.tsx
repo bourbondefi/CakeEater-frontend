@@ -69,7 +69,7 @@ const Bond: React.FC = () => {
   const isBondPurchasable = useMemo(() => Number(bondStat?.tokenInFtm) < 1.01, [bondStat]);
   const isBondPayingPremium = useMemo(() => Number(bondStat?.tokenInFtm) >= 1.1, [bondStat]);
 // console.log("bondstat", Number(bondStat?.tokenInFtm))
-  const bondScale = (Number(cashPrice) / 100000000000000).toFixed(4); 
+  const bondScale = (Number(cashPrice) / 1).toFixed(4); 
 
   return (
     <Switch>
