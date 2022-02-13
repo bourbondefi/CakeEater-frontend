@@ -52,7 +52,7 @@ export class BombFinance {
     this.BSHARE = new ERC20(deployments.BShare.address, provider, 'BSHARE');
     this.BBOND = new ERC20(deployments.BBond.address, provider, 'BBOND');
     this.BNB = this.externalTokens['WBNB'];
-    this.CAKE = this.externalTokens['BTCB'];
+    this.CAKE = this.externalTokens['CAKE'];
     this.XBOMB = new ERC20(deployments.xBOMB.address, provider, 'XBOMB');
 
     // Uniswap V2 Pair
@@ -405,7 +405,7 @@ export class BombFinance {
         tokenPrice = await this.getLPTokenPrice(token, this.BSHARE, false);
       } else if (tokenName === 'BSHARE-BNB-APELP') {
         tokenPrice = await this.getApeLPTokenPrice(token, this.BSHARE, false);
-      } else if (tokenName === 'BOURBONCAKE-BTCB-APELP') {
+      } else if (tokenName === 'BOURBONCAKE-CAKE-APELP') {
         tokenPrice = await this.getApeLPTokenPrice(token, this.BOURBONCAKE, true);
       } else {
         tokenPrice = await this.getTokenPriceFromPancakeswap(token);
@@ -624,7 +624,7 @@ export class BombFinance {
     // const {WBNB} = this.config.externalTokens;
 
     // const wbnb = new Token(56, WBNB[0], WBNB[1]);
-    const btcb = new Token(56, this.CAKE.address, this.CAKE.decimal, 'BTCB', 'BTCB');
+    const btcb = new Token(56, this.CAKE.address, this.CAKE.decimal, 'CAKE', 'CAKE');
     const token = new Token(56, tokenContract.address, tokenContract.decimal, tokenContract.symbol);
     try {
       const wftmToToken = await Fetcher.fetchPairData(btcb, token, this.provider);
@@ -645,7 +645,7 @@ export class BombFinance {
     //const {WBNB} = this.config.externalTokens;
 
     //  const wbnb = new Token(56, WBNB[0], WBNB[1]);
-    const btcb = new Token(56, this.CAKE.address, this.CAKE.decimal, 'BTCB', 'BTCB');
+    const btcb = new Token(56, this.CAKE.address, this.CAKE.decimal, 'CAKE', 'CAKE');
     const token = new Token(56, this.BOURBONCAKE.address, this.BOURBONCAKE.decimal, this.BOURBONCAKE.symbol);
     try {
       const wftmToToken = await Fetcher.fetchPairData(btcb, token, this.provider);
@@ -702,9 +702,9 @@ export class BombFinance {
   async getBTCBPriceFromPancakeswap(): Promise<string> {
     const ready = await this.provider.ready;
     if (!ready) return;
-    const {BTCB} = this.externalTokens;
+    const {CAKE} = this.externalTokens;
     try {
-      const btcPriceInBNB = await this.getTokenPriceFromPancakeswap(BTCB);
+      const btcPriceInBNB = await this.getTokenPriceFromPancakeswap(CAKE);
 
       const wbnbPrice = await this.getWBNBPriceFromPancakeswap();
 
@@ -712,25 +712,25 @@ export class BombFinance {
       //console.log('btcprice', btcprice);
       return btcprice;
     } catch (err) {
-      console.error(`Failed to fetch token price of BTCB: ${err}`);
+      console.error(`Failed to fetch token price of CAKE: ${err}`);
     }
   }
 
   // async getBTCBPriceFromPancakeswap(): Promise<string> {
   //   const ready = await this.provider.ready;
   //   if (!ready) return;
-  //   const { BTCB, FUSDT } = this.externalTokens;
+  //   const { CAKE, FUSDT } = this.externalTokens;
   //   try {
-  //     const fusdt_btcb_lp_pair = this.externalTokens['USDT-BTCB-LP'];
-  //     let ftm_amount_BN = await BTCB.balanceOf(fusdt_btcb_lp_pair.address);
-  //     let ftm_amount = Number(getFullDisplayBalance(ftm_amount_BN, BTCB.decimal));
+  //     const fusdt_btcb_lp_pair = this.externalTokens['USDT-CAKE-LP'];
+  //     let ftm_amount_BN = await CAKE.balanceOf(fusdt_btcb_lp_pair.address);
+  //     let ftm_amount = Number(getFullDisplayBalance(ftm_amount_BN, CAKE.decimal));
   //     let fusdt_amount_BN = await FUSDT.balanceOf(fusdt_btcb_lp_pair.address);
   //     let fusdt_amount = Number(getFullDisplayBalance(fusdt_amount_BN, FUSDT.decimal));
-  //     console.log('BTCB price', (fusdt_amount / ftm_amount).toString());
+  //     console.log('CAKE price', (fusdt_amount / ftm_amount).toString());
   //     return (fusdt_amount / ftm_amount).toString();
-  //     console.log('BTCB price');
+  //     console.log('CAKE price');
   //   } catch (err) {
-  //     console.error(`Failed to fetch token price of BTCB: ${err}`);
+  //     console.error(`Failed to fetch token price of CAKE: ${err}`);
   //   }
   // }
 

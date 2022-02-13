@@ -11,7 +11,7 @@ const configurations: {[env: string]: Configuration} = {
   //   externalTokens: {
   //     WBNB: ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18],
   //     FUSDT: ['0x55d398326f99059fF775485246999027B3197955', 18], // This is actually BUSD on mainnet not fusdt
-  //     BTCB: ['0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c', 18],
+  //     CAKE: ['0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c', 18],
   //     ZOO: ['0x09e145a1d53c0045f41aeef25d8ff982ae74dd56', 0],
   //     SHIBA: ['0x9ba3e4f84a34df4e08c112e1a0ff148b81655615', 9],
   //     'USDT-BNB-LP': ['0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16', 18],
@@ -32,7 +32,6 @@ const configurations: {[env: string]: Configuration} = {
     externalTokens: {
       WBNB: ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18],
       FUSDT: ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18], // This is actually BUSD on mainnet not fusdt
-      BTCB: ['0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c', 18],
       SBTC: ['0x1d28cd41fc594232D05F2AbdAFBb556E7F78Dc2a', 18],
       SVL: ['0x37F14E7c2FadC2A01dBD93b8a1F69D41c6c3d554', 18],
       SUSD: ['0x12017c89444624C0268A1053467e22954F4fd362', 18],
@@ -40,12 +39,12 @@ const configurations: {[env: string]: Configuration} = {
       ZOO: ['0x09e145a1d53c0045f41aeef25d8ff982ae74dd56', 0],
       SHIBA: ['0x9ba3e4f84a34df4e08c112e1a0ff148b81655615', 9],
       'USDT-BNB-LP': ['0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16', 18],
-      'USDT-BTCB-LP': ['0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b', 18],
+      'USDT-CAKE-LP': ['0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b', 18],
       'BOURBONCAKE-CAKE-LP': ['0xdE7Bc7638196b4587f19046B18671C836945A9a3', 18],
       'BOURBONCAKE-BNB-LP': ['0xABAF6f503A61e45dD9837fBe3dA17337CaE1844C', 18],
       'BSHARE-BNB-LP': ['0x1303246855b5B5EbC71F049Fdb607494e97218f8', 18],
       'BSHARE-BNB-APELP': ['0x0dE2a71b2f43CF588A00422d41E1C02D0E08D552', 18],
-      'BOURBONCAKE-BTCB-APELP': ['0xB6E85031F313563bF12ea414118978C8BD78db5D', 18],
+      'BOURBONCAKE-CAKE-APELP': ['0xB6E85031F313563bF12ea414118978C8BD78db5D', 18],
     },
     baseLaunchDate: new Date('2021-11-20 1:00:00Z'),
     bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
@@ -61,7 +60,6 @@ const configurations: {[env: string]: Configuration} = {
     externalTokens: {
       WBNB: ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18],
       FUSDT: ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18], // This is actually BUSD on mainnet not fusdt
-      BTCB: ['0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c', 18],
       SBTC: ['0x1d28cd41fc594232D05F2AbdAFBb556E7F78Dc2a', 18],
       SVL: ['0x37F14E7c2FadC2A01dBD93b8a1F69D41c6c3d554', 18],
       SUSD: ['0x12017c89444624C0268A1053467e22954F4fd362', 18],
@@ -69,12 +67,12 @@ const configurations: {[env: string]: Configuration} = {
       ZOO: ['0x09e145a1d53c0045f41aeef25d8ff982ae74dd56', 0],
       SHIBA: ['0x9ba3e4f84a34df4e08c112e1a0ff148b81655615', 9],
       'USDT-BNB-LP': ['0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16', 18],
-      'USDT-BTCB-LP': ['0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b', 18],
+      'USDT-CAKE-LP': ['0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b', 18],
       'BOURBONCAKE-CAKE-LP': ['0xdE7Bc7638196b4587f19046B18671C836945A9a3', 18],
       'BOURBONCAKE-BNB-LP': ['0xABAF6f503A61e45dD9837fBe3dA17337CaE1844C', 18],
       'BSHARE-BNB-LP': ['0x1303246855b5B5EbC71F049Fdb607494e97218f8', 18],
       'BSHARE-BNB-APELP': ['0x0dE2a71b2f43CF588A00422d41E1C02D0E08D552', 18],
-      'BOURBONCAKE-BTCB-APELP': ['0xB6E85031F313563bF12ea414118978C8BD78db5D', 18],
+      'BOURBONCAKE-CAKE-APELP': ['0xB6E85031F313563bF12ea414118978C8BD78db5D', 18],
     },
     baseLaunchDate: new Date('2021-11-20 1:00:00Z'),
     bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
@@ -99,11 +97,11 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
   sort: the order of the pool
   */
   // BombBTCApeLPBombRewardPool: {
-  //   name: 'Earn BOURBONCAKE by BOURBONCAKE-BTCB Ape LP',
+  //   name: 'Earn BOURBONCAKE by BOURBONCAKE-CAKE Ape LP',
   //   poolId: 2,
   //   sectionInUI: 1,
   //   contract: 'BombBTCApeLPBombRewardPool',
-  //   depositTokenName: 'BOURBONCAKE-BTCB-APELP',
+  //   depositTokenName: 'BOURBONCAKE-CAKE-APELP',
   //   earnTokenName: 'BOURBONCAKE',
   //   finished: true,
   //   sort: 2,
@@ -245,7 +243,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
   //   closedForStaking: false,
   // },
   // BombBtcbLPApeBShareRewardPool: {
-  //   name: 'Earn BSHARE by BOURBONCAKE-BTCB LP',
+  //   name: 'Earn BSHARE by BOURBONCAKE-CAKE LP',
   //   poolId: 3,
   //   sectionInUI: 2,
   //   contract: 'BombBtcbLPApeBShareRewardPool',
@@ -267,11 +265,11 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     closedForStaking: true,
   },
   // BombBtcbApeLPBShareRewardPool: {
-  //   name: 'Earn BSHARE by BOURBONCAKE-BTCB Ape LP',
+  //   name: 'Earn BSHARE by BOURBONCAKE-CAKE Ape LP',
   //   poolId: 3,
   //   sectionInUI: 2,
   //   contract: 'BombBtcbApeLPBShareRewardPool',
-  //   depositTokenName: 'BOURBONCAKE-BTCB-APELP',
+  //   depositTokenName: 'BOURBONCAKE-CAKE-APELP',
   //   earnTokenName: 'BSHARE',
   //   finished: true,
   //   sort: 4,
@@ -289,7 +287,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     closedForStaking: false,
   },
   BombBtcbLPBShareRewardPool: {
-    name: 'Earn BSHARE by BOURBONCAKE-BTCB LP',
+    name: 'Earn BSHARE by BOURBONCAKE-CAKE LP',
     poolId: 1,
     sectionInUI: 2,
     contract: 'BombBtcbLPBShareRewardPool',

@@ -65,7 +65,7 @@ const ProvideLiquidity = () => {
     }
     if (!isNumeric(e.currentTarget.value)) return;
     setFtmAmount(e.currentTarget.value);
-    const quoteFromSpooky = await bombFinance.quoteFromSpooky(e.currentTarget.value, 'BTCB');
+    const quoteFromSpooky = await bombFinance.quoteFromSpooky(e.currentTarget.value, 'CAKE');
     setBombAmount(quoteFromSpooky);
 
     setLpTokensAmount(quoteFromSpooky / bombLPStats.tokenAmount);
@@ -101,7 +101,7 @@ const ProvideLiquidity = () => {
               <a href="https://pancakeswap.finance/" rel="noopener noreferrer" target="_blank">
                 Pancakeswap
               </a>{' '}
-              are the only ways to provide Liquidity on BOURBONCAKE-BTCB pair without paying tax.
+              are the only ways to provide Liquidity on BOURBONCAKE-CAKE pair without paying tax.
             </b>
           </Alert>
           <Grid item xs={12} sm={12}>
@@ -125,7 +125,7 @@ const ProvideLiquidity = () => {
                           onChange={handleFtmChange}
                           value={ftmAmount}
                           max={ftmBalance}
-                          symbol={'BTCB'}
+                          symbol={'CAKE'}
                         ></TokenInput>
                       </Grid>
                       <Grid item xs={12}>

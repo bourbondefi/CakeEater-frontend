@@ -359,7 +359,7 @@ const Home = () => {
                   <TokenSymbol symbol="BOURBONCAKE-CAKE-LP" />
                 </CardIcon>
               </Box>
-              <h2>BOURBONCAKE-BTCB PancakeSwap LP</h2>
+              <h2>BOURBONCAKE-CAKE PancakeSwap LP</h2>
               <Box mt={2}>
                 <Button disabled onClick={onPresentBombZap} className="shinyButtonDisabledSecondary">
                   Zap In
@@ -368,7 +368,7 @@ const Home = () => {
               <Box mt={2}>
                 <span style={{fontSize: '26px'}}>
                   {bombLPStats?.tokenAmount ? bombLPStats?.tokenAmount : '-.--'} BOURBONCAKE /{' '}
-                  {bombLPStats?.ftmAmount ? bombLPStats?.ftmAmount : '-.--'} BTCB
+                  {bombLPStats?.ftmAmount ? bombLPStats?.ftmAmount : '-.--'} CAKE
                 </span>
               </Box>
               <Box>${bombLPStats?.priceOfOne ? bombLPStats.priceOfOne : '-.--'}</Box>
