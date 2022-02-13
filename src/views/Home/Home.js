@@ -19,7 +19,7 @@ import MetamaskFox from '../../assets/img/metamask-fox.svg';
 import {Box, Button, Card, CardContent, Grid, Paper} from '@material-ui/core';
 import ZapModal from '../Bank/components/ZapModal';
 import {Alert} from '@material-ui/lab';
-
+import useCashPriceInLastTWAP from '../../hooks/useCashPriceInLastTWAP';
 import {makeStyles} from '@material-ui/core/styles';
 import useBombFinance from '../../hooks/useBombFinance';
 import {ReactComponent as IconTelegram} from '../../assets/img/telegram.svg';
@@ -60,6 +60,7 @@ const Home = () => {
   const bShareStats = usebShareStats();
   const tBondStats = useBondStats();
   const bombFinance = useBombFinance();
+  const cashPrice = useCashPriceInLastTWAP();
 
   let bomb;
   if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
@@ -76,6 +77,7 @@ const Home = () => {
     'https://pancakeswap.finance/swap?outputCurrency=0x37c3205E81D44770d6b9E5693094264C6aA4d6E1';
   const bombLPStats = useMemo(() => (bombFtmLpStats ? bombFtmLpStats : null), [bombFtmLpStats]);
   const bshareLPStats = useMemo(() => (bShareFtmLpStats ? bShareFtmLpStats : null), [bShareFtmLpStats]);
+  const bondScale = (Number(cashPrice) / 1000000000000000000).toFixed(4); 
   const bombPriceInDollars = useMemo(
     () => (bombStats ? Number(bombStats.priceInDollars).toFixed(2) : null),
     [bombStats],
@@ -337,11 +339,11 @@ const Home = () => {
               1 BBOND
               <Box>
                 <span style={{fontSize: '30px', color: 'white'}}>
-                  {tBondPriceInBNB ? tBondPriceInBNB : '-.----'} CAKE
+                  {bondScale ? bondScale : '-.----'} CAKE
                 </span>
               </Box>
               <Box>
-                <span style={{fontSize: '16px'}}>${tBondPriceInDollars ? tBondPriceInDollars : '-.--'} / BBOND</span>
+                <span style={{fontSize: '16px'}}>${bondScale ? bondScale : '-.--'} / BBOND</span>
               </Box>
               <span style={{fontSize: '12px'}}>
                 Market Cap: ${roundAndFormatNumber((tBondCirculatingSupply * tBondPriceInDollars).toFixed(2), 2)} <br />
