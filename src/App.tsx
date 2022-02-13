@@ -93,7 +93,7 @@ const Providers: React.FC = ({children}) => {
             walletlink: {
               url: config.defaultProvider,
               appName: 'BourbonDefi',
-              appLogoUrl: 'https://raw.githubusercontent.com/bourbondefi/bomb-assets/master/bomb-512.png',
+              appLogoUrl: 'bourbondefi.com',
             },
           }}
         >

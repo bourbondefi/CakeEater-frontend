@@ -963,16 +963,16 @@ export class BombFinance {
       let assetUrl;
       if (assetName === 'BOURBONCAKE') {
         asset = this.BOURBONCAKE;
-        assetUrl = 'https://raw.githubusercontent.com/bombmoney/bomb-assets/master/bomb-512.png';
+        assetUrl = '';
       } else if (assetName === 'BSHARE') {
         asset = this.BSHARE;
-        assetUrl = 'https://raw.githubusercontent.com/bombmoney/bomb-assets/master/bshare-512.png';
+        assetUrl = '';
       } else if (assetName === 'BBOND') {
         asset = this.BBOND;
-        assetUrl = 'https://raw.githubusercontent.com/bombmoney/bomb-assets/master/bbond-512.png';
+        assetUrl = '';
       } else if (assetName === 'XBOMB') {
         asset = this.XBOMB;
-        assetUrl = 'https://raw.githubusercontent.com/bombmoney/bomb-assets/master/xbomb-512.png';
+        assetUrl = '';
       }
       await ethereum.request({
         method: 'wallet_watchAsset',
