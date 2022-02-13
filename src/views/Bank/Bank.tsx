@@ -133,11 +133,14 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
     pairName = 'BOURBONCAKE-CAKE pair';
     uniswapUrl = 'https://pancakeswap.finance/add/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c/' + bombAddr;
  //   vaultUrl = 'https://www.bomb.farm/#/bsc/vault/bomb-bomb-btcb';
-  } else {
-    pairName = 'BSHARE-BNB pair';
-    uniswapUrl = 'https://pancakeswap.finance/add/BNB/' + bshareAddr;
+  } else if (bank.depositTokenName.includes('WHISKEY-BUSD-LP')){
+    pairName = 'WHISKEY-BUSD pair';
+    uniswapUrl = 'https://pancakeswap.finance/add/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56/0xce1aD4E2810E413e2e3684DeCC58A0Bd01c907d9';
  //   vaultUrl = 'https://www.bomb.farm/#/bsc/vault/bomb-bshare-bnb';
 
+  } else {
+    pairName = 'BSHARE-BNB pair';
+    uniswapUrl = 'https://pancakeswap.finance/add/BNB/' + bshareAddr
   }
   return (
     <Card>
