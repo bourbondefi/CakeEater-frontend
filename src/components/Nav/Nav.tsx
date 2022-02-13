@@ -233,18 +233,11 @@ const Nav = () => {
                 </ListItem>
                 <ListItemLink primary="Home" to="/" />
                 <ListItemLink primary="Farm" to="/farm" />
-                <ListItemLink primary="xBOMB" to="/xbomb" />
                 <ListItemLink primary="Boardroom" to="/boardroom" />
                 <ListItemLink primary="Bond" to="/bond" />
                 {/* <ListItemLink primary="SBS" to="/sbs" /> */}
                 {/* <ListItemLink primary="Liquidity" to="/liquidity" /> */}
                 {/* <ListItemLink primary="Regulations" to="/regulations" /> */}
-                <ListItem button component="a" href="https://docs.bomb.money">
-                  <ListItemText>Docs</ListItemText>
-                </ListItem>
-                <ListItem button component="a" href="https://bomb.farm">
-                  <ListItemText>AutoVaults</ListItemText>
-                </ListItem>
               </List>
             </Drawer>
           </>
