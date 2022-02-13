@@ -405,7 +405,7 @@ export class BombFinance {
         tokenPrice = await this.getLPTokenPrice(token, this.BSHARE, false);
       } else if (tokenName === 'BSHARE-BNB-APELP') {
         tokenPrice = await this.getApeLPTokenPrice(token, this.BSHARE, false);
-      } else if (tokenName === 'BOURBONCAKE-CAKE-APELP') {
+      } else if (tokenName === 'WHISKEY-BUSD-LP') {
         tokenPrice = await this.getApeLPTokenPrice(token, this.BOURBONCAKE, true);
       } else {
         tokenPrice = await this.getTokenPriceFromPancakeswap(token);

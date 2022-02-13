@@ -11,6 +11,7 @@ import tBondLogo from '../../assets/img/bbond.png';
 
 import bombFtmLpLogo from '../../assets/img/bomb-bitcoin-LP.png';
 import bshareFtmLpLogo from '../../assets/img/bshare-bnb-LP.png';
+import whiskeybusd from '../../assets/img/whiskey-busd-lp.png';
 
 import bnbLogo from '../../assets/img/bnb.png';
 import btcLogo from '../../assets/img/CAKE.png';
@@ -37,6 +38,7 @@ const logosBySymbol: {[title: string]: string} = {
   'BSHARE-BNB-LP': bshareFtmLpLogo,
   'BSHARE-BNB-APELP': bshareFtmLpLogo,
   'BOURBONCAKE-CAKE-APELP': bombFtmLpLogo,
+  'WHISKEY-BUSD-LP': whiskeybusd
 };
 
 type LogoProps = {
