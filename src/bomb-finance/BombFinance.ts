@@ -250,20 +250,20 @@ export class BombFinance {
 
   async getBombPriceInLastTWAP(): Promise<BigNumber> {
     const {Treasury} = this.contracts;
-    return Treasury.getBombUpdatedPrice();
+    return Treasury.getBourbonCakeUpdatedPrice();
   }
 
   // async getBombPegTWAP(): Promise<any> {
   //   const { Treasury } = this.contracts;
-  //   const updatedPrice = Treasury.getBombUpdatedPrice();
+  //   const updatedPrice = Treasury.getBourbonCakeUpdatedPrice();
   //   const updatedPrice2 = updatedPrice * 10000;
   //   return updatedPrice2;
   // }
 
   async getBondsPurchasable(): Promise<BigNumber> {
     const {Treasury} = this.contracts;
-    // const burnableBomb = (Number(Treasury.getBurnableBombLeft()) * 1000).toFixed(2).toString();
-    return Treasury.getBurnableBombLeft();
+    // const burnableBomb = (Number(Treasury.getBurnableBourbonCakeLeft()) * 1000).toFixed(2).toString();
+    return Treasury.getBurnableBourbonCakeLeft();
   }
 
   /**
@@ -373,9 +373,9 @@ export class BombFinance {
       const startDateTime = new Date(poolStartTime.toNumber() * 1000);
       const FOUR_DAYS = 4 * 24 * 60 * 60 * 1000;
       if (Date.now() - startDateTime.getTime() > FOUR_DAYS) {
-        return await poolContract.epochBombPerSecond(1);
+        return await poolContract.epochBourbonCakePerSecond(1);
       }
-      return await poolContract.epochBombPerSecond(0);
+      return await poolContract.epochBourbonCakePerSecond(0);
     }
     const rewardPerSecond = await poolContract.tSharePerSecond();
     if (depositTokenName.startsWith('BOURBONCAKE')) {
@@ -436,7 +436,7 @@ export class BombFinance {
    */
   async buyBonds(amount: string | number): Promise<TransactionResponse> {
     const {Treasury} = this.contracts;
-    const treasuryBombPrice = await Treasury.getBombPrice();
+    const treasuryBombPrice = await Treasury.getBourbonCakePrice();
     return await Treasury.buyBonds(decimalToBalance(amount), treasuryBombPrice);
   }
 
@@ -446,7 +446,7 @@ export class BombFinance {
    */
   async redeemBonds(amount: string | number): Promise<TransactionResponse> {
     const {Treasury} = this.contracts;
-    const priceForBomb = await Treasury.getBombPrice();
+    const priceForBomb = await Treasury.getBourbonCakePrice();
 
     return await Treasury.redeemBonds(decimalToBalance(amount), priceForBomb);
   }
@@ -524,7 +524,7 @@ export class BombFinance {
     const pool = this.contracts[poolName];
     try {
       if (earnTokenName === 'BOURBONCAKE') {
-        return await pool.pendingBOMB(poolId, account);
+        return await pool.pendingBOURBONCAKE(poolId, account);
       } else {
         return await pool.pendingShare(poolId, account);
       }
@@ -1142,7 +1142,7 @@ export class BombFinance {
     const {BShareSwapper} = this.contracts;
     const bshareBalanceBN = await BShareSwapper.getBShareBalance();
     const bbondBalanceBN = await BShareSwapper.getBBondBalance(address);
-    // const bombPriceBN = await BShareSwapper.getBombPrice();
+    // const bombPriceBN = await BShareSwapper.getBourbonCakePrice();
     // const bsharePriceBN = await BShareSwapper.getBSharePrice();
     const rateBSharePerBombBN = await BShareSwapper.getBShareAmountPerBomb();
     const bshareBalance = getDisplayBalance(bshareBalanceBN, 18, 5);

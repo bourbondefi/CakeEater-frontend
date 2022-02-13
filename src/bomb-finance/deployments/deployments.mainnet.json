@@ -5021,7 +5021,7 @@
       },
       {
         "inputs": [],
-        "name": "getBombPrice",
+        "name": "getBourbonCakePrice",
         "outputs": [
           {
             "internalType": "uint256",
@@ -5078,7 +5078,7 @@
         "inputs": [
           {
             "internalType": "contract IERC20",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -5562,7 +5562,7 @@
       },
       {
         "inputs": [],
-        "name": "bombOracle",
+        "name": "bourboncakeOracle",
         "outputs": [
           {
             "internalType": "address",
@@ -5670,7 +5670,7 @@
           },
           {
             "internalType": "address",
-            "name": "_bombPool",
+            "name": "_bourboncakePool",
             "type": "address"
           },
           {
@@ -5940,11 +5940,11 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bombOracle",
+            "name": "_bourboncakeOracle",
             "type": "address"
           }
         ],
-        "name": "setBombOracle",
+        "name": "setBourbonCakeOracle",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -6247,7 +6247,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -6549,7 +6549,7 @@
             "type": "address"
           }
         ],
-        "name": "pendingBOMB",
+        "name": "pendingBOURBONCAKE",
         "outputs": [
           {
             "internalType": "uint256",
@@ -6600,7 +6600,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "accBombPerShare",
+            "name": "accBourbonCakePerShare",
             "type": "uint256"
           },
           {
@@ -6751,7 +6751,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -7053,7 +7053,7 @@
             "type": "address"
           }
         ],
-        "name": "pendingBOMB",
+        "name": "pendingBOURBONCAKE",
         "outputs": [
           {
             "internalType": "uint256",
@@ -7104,7 +7104,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "accBombPerShare",
+            "name": "accBourbonCakePerShare",
             "type": "uint256"
           },
           {
@@ -7256,7 +7256,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -7558,7 +7558,7 @@
             "type": "address"
           }
         ],
-        "name": "pendingBOMB",
+        "name": "pendingBOURBONCAKE",
         "outputs": [
           {
             "internalType": "uint256",
@@ -7609,7 +7609,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "accBombPerShare",
+            "name": "accBourbonCakePerShare",
             "type": "uint256"
           },
           {
@@ -7761,7 +7761,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -8063,7 +8063,7 @@
             "type": "address"
           }
         ],
-        "name": "pendingBOMB",
+        "name": "pendingBOURBONCAKE",
         "outputs": [
           {
             "internalType": "uint256",
@@ -8114,7 +8114,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "accBombPerShare",
+            "name": "accBourbonCakePerShare",
             "type": "uint256"
           },
           {
@@ -8266,7 +8266,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -8568,7 +8568,7 @@
             "type": "address"
           }
         ],
-        "name": "pendingBOMB",
+        "name": "pendingBOURBONCAKE",
         "outputs": [
           {
             "internalType": "uint256",
@@ -8619,7 +8619,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "accBombPerShare",
+            "name": "accBourbonCakePerShare",
             "type": "uint256"
           },
           {
@@ -8770,7 +8770,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -9072,7 +9072,7 @@
             "type": "address"
           }
         ],
-        "name": "pendingBOMB",
+        "name": "pendingBOURBONCAKE",
         "outputs": [
           {
             "internalType": "uint256",
@@ -9123,7 +9123,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "accBombPerShare",
+            "name": "accBourbonCakePerShare",
             "type": "uint256"
           },
           {
@@ -9274,7 +9274,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -9460,7 +9460,7 @@
             "type": "uint256"
           }
         ],
-        "name": "epochBombPerSecond",
+        "name": "epochBourbonCakePerSecond",
         "outputs": [
           {
             "internalType": "uint256",
@@ -9589,7 +9589,7 @@
             "type": "address"
           }
         ],
-        "name": "pendingBOMB",
+        "name": "pendingBOURBONCAKE",
         "outputs": [
           {
             "internalType": "uint256",
@@ -9627,7 +9627,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "accBombPerShare",
+            "name": "accBourbonCakePerShare",
             "type": "uint256"
           },
           {
@@ -9766,7 +9766,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -9952,7 +9952,7 @@
             "type": "uint256"
           }
         ],
-        "name": "epochBombPerSecond",
+        "name": "epochBourbonCakePerSecond",
         "outputs": [
           {
             "internalType": "uint256",
@@ -10081,7 +10081,7 @@
             "type": "address"
           }
         ],
-        "name": "pendingBOMB",
+        "name": "pendingBOURBONCAKE",
         "outputs": [
           {
             "internalType": "uint256",
@@ -10119,7 +10119,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "accBombPerShare",
+            "name": "accBourbonCakePerShare",
             "type": "uint256"
           },
           {
@@ -10257,7 +10257,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -10443,7 +10443,7 @@
             "type": "uint256"
           }
         ],
-        "name": "epochBombPerSecond",
+        "name": "epochBourbonCakePerSecond",
         "outputs": [
           {
             "internalType": "uint256",
@@ -10572,7 +10572,7 @@
             "type": "address"
           }
         ],
-        "name": "pendingBOMB",
+        "name": "pendingBOURBONCAKE",
         "outputs": [
           {
             "internalType": "uint256",
@@ -10610,7 +10610,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "accBombPerShare",
+            "name": "accBourbonCakePerShare",
             "type": "uint256"
           },
           {
@@ -10748,7 +10748,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -10934,7 +10934,7 @@
             "type": "uint256"
           }
         ],
-        "name": "epochBombPerSecond",
+        "name": "epochBourbonCakePerSecond",
         "outputs": [
           {
             "internalType": "uint256",
@@ -11063,7 +11063,7 @@
             "type": "address"
           }
         ],
-        "name": "pendingBOMB",
+        "name": "pendingBOURBONCAKE",
         "outputs": [
           {
             "internalType": "uint256",
@@ -11101,7 +11101,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "accBombPerShare",
+            "name": "accBourbonCakePerShare",
             "type": "uint256"
           },
           {
@@ -11644,7 +11644,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -11732,7 +11732,7 @@
       },
       {
         "inputs": [],
-        "name": "getBombBalance",
+        "name": "getBourbonCakeBalance",
         "outputs": [
           {
             "internalType": "uint256",
@@ -11806,11 +11806,11 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           }
         ],
-        "name": "setBomb",
+        "name": "setBourbonCake",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -12151,7 +12151,7 @@
       },
       {
         "inputs": [],
-        "name": "bombOracle",
+        "name": "bourboncakeOracle",
         "outputs": [
           {
             "internalType": "address",
@@ -12370,7 +12370,7 @@
       },
       {
         "inputs": [],
-        "name": "getBombCirculatingSupply",
+        "name": "getBourbonCakeCirculatingSupply",
         "outputs": [
           {
             "internalType": "uint256",
@@ -12383,7 +12383,7 @@
       },
       {
         "inputs": [],
-        "name": "getBombPrice",
+        "name": "getBourbonCakePrice",
         "outputs": [
           {
             "internalType": "uint256",
@@ -12396,7 +12396,7 @@
       },
       {
         "inputs": [],
-        "name": "getBombUpdatedPrice",
+        "name": "getBourbonCakeUpdatedPrice",
         "outputs": [
           {
             "internalType": "uint256",
@@ -12435,11 +12435,11 @@
       },
       {
         "inputs": [],
-        "name": "getBurnableBombLeft",
+        "name": "getBurnableBourbonCakeLeft",
         "outputs": [
           {
             "internalType": "uint256",
-            "name": "_burnableBombLeft",
+            "name": "_burnableBourbonCakeLeft",
             "type": "uint256"
           }
         ],
@@ -12499,7 +12499,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           },
           {
@@ -12514,7 +12514,7 @@
           },
           {
             "internalType": "address",
-            "name": "_bombOracle",
+            "name": "_bourboncakeOracle",
             "type": "address"
           },
           {
@@ -12782,11 +12782,11 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bombOracle",
+            "name": "_bourboncakeOracle",
             "type": "address"
           }
         ],
-        "name": "setBombOracle",
+        "name": "setBourbonCakeOracle",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -13082,7 +13082,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bomb",
+            "name": "_bourboncake",
             "type": "address"
           }
         ],
@@ -13329,7 +13329,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bombOracle",
+            "name": "_bourboncakeOracle",
             "type": "address"
           }
         ],
@@ -13729,7 +13729,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_bombOracle",
+            "name": "_bourboncakeOracle",
             "type": "address"
           }
         ],
