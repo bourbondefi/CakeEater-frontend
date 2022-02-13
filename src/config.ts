@@ -288,11 +288,11 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     sort: 1,
     closedForStaking: false,
   },
-  WhiskeyBUSDLPBShareRewardPool: {
+  BShareRewardPool: {
     name: 'Earn BSHARE by WHISKEY-BUSD LP',
     poolId: 2,
     sectionInUI: 2,
-    contract: 'BombBtcbLPBShareRewardPool',
+    contract: 'BShareRewardPool',
     depositTokenName: 'WHISKEY-BUSD-LP',
     earnTokenName: 'BSHARE',
     finished: false,
