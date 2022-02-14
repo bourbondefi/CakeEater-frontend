@@ -42,7 +42,7 @@ const Stake: React.FC = () => {
   const tokenPriceInDollars = useMemo(
     () =>
       stakedTokenPriceInDollars
-        ? (Number(stakedTokenPriceInDollars) * Number(getDisplayBalance(stakedBalance))).toFixed(2).toString()
+        ? (Number(stakedTokenPriceInDollars) / 100 * Number(getDisplayBalance(stakedBalance))).toFixed(2).toString()
         : null,
     [stakedTokenPriceInDollars, stakedBalance],
   );
