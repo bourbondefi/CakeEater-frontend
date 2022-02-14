@@ -459,7 +459,7 @@ export class BombFinance {
       const token = this.externalTokens[bankInfo.depositTokenName];
       const tokenPrice = await this.getDepositTokenPriceInDollars(bankInfo.depositTokenName, token);
       const tokenAmountInPool = await token.balanceOf(pool.address);
-      const value = Number(getDisplayBalance(tokenAmountInPool, token.decimal)) * Number(tokenPrice);
+      const value = Number(getDisplayBalance(tokenAmountInPool, token.decimal)) / Number(tokenPrice);
       const poolValue = Number.isNaN(value) ? 0 : value;
       totalValue += poolValue;
     }
