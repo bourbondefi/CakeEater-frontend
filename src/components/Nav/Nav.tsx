@@ -235,8 +235,22 @@ const Nav = () => {
                 <ListItemLink primary="Farm" to="/farm" />
                 <ListItemLink primary="Boardroom" to="/boardroom" />
                 <ListItemLink primary="Bond" to="/bond" />
-                <ListItemLink primary="DAO" to="https://www.bourbondao.com/" />
-                <ListItemLink primary="DOCS" to="https://bourbondefi.gitbook.io/bourbon-finance/" />
+                <a
+                href="https://bourbondao.com/bonds"
+                className={'navLink ' + classes.link}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                DAO
+              </a>
+              <a
+                href="https://bourbondefi.gitbook.io/bourbon-finance/"
+                className={'navLink ' + classes.link}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                DOCS
+              </a>
                 {/* <ListItemLink primary="SBS" to="/sbs" /> */}
                 {/* <ListItemLink primary="Liquidity" to="/liquidity" /> */}
                 {/* <ListItemLink primary="Regulations" to="/regulations" /> */}
