@@ -131,7 +131,7 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
  // let vaultUrl: string;
   if (bank.depositTokenName.includes('BOURBONCAKE')) {
     pairName = 'BOURBONCAKE-CAKE pair';
-    uniswapUrl = 'https://pancakeswap.finance/add/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c/' + bombAddr;
+    uniswapUrl = 'https://pancakeswap.finance/add/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/' + bombAddr;
  //   vaultUrl = 'https://www.bomb.farm/#/bsc/vault/bomb-bomb-btcb';
   } else if (bank.depositTokenName.includes('WHISKEY-BUSD-LP')){
     pairName = 'WHISKEY-BUSD pair';

@@ -28,13 +28,14 @@ export class BombFinance {
   boardroomVersionOfUser?: string;
 
   BOMBBTCB_LP: Contract;
-  WHISKEY: Contract;
+  WHISKEY: ERC20;
   BOURBONCAKE: ERC20;
   BSHARE: ERC20;
   BBOND: ERC20;
   XBOMB: ERC20;
   BNB: ERC20;
   CAKE: ERC20;
+  BUSD: ERC20;
 
   constructor(cfg: Configuration) {
     const {deployments, externalTokens} = cfg;
@@ -54,11 +55,12 @@ export class BombFinance {
     this.BBOND = new ERC20(deployments.BBond.address, provider, 'BBOND');
     this.BNB = this.externalTokens['WBNB'];
     this.CAKE = this.externalTokens['CAKE'];
+    this.WHISKEY = this.externalTokens['WHISKEY'];
+    this.BUSD = this.externalTokens['FUSDT'];
     this.XBOMB = new ERC20(deployments.xBOMB.address, provider, 'XBOMB');
 
     // Uniswap V2 Pair
     this.BOMBBTCB_LP = new Contract(externalTokens['BOURBONCAKE-CAKE-LP'][0], IUniswapV2PairABI, provider);
-    this.WHISKEY = new Contract(externalTokens['WHISKEY-BUSD-LP'][0], IUniswapV2PairABI, provider);
     this.config = cfg;
     this.provider = provider;
   }
@@ -404,11 +406,11 @@ export class BombFinance {
         tokenPrice = await this.getLPTokenPrice(token, this.BOURBONCAKE, true);
       } else if (tokenName === 'BSHARE-BNB-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.BSHARE, false);
-      } else if (tokenName === 'WHISKEY-BUSD-LP') {
-        tokenPrice = await this.getLPTokenPrice(token, this.BOURBONCAKE, true);
+      } else if (tokenName === 'WHISKEY-BUSD') {
+        tokenPrice = await this.getLPTokenPrice(token, this.WHISKEY, false);
       } else {
-        tokenPrice = await this.getTokenPriceFromPancakeswap(token);
-        tokenPrice = (Number(tokenPrice) * Number(priceOfOneFtmInDollars)).toString();
+        tokenPrice = await this.getTokenPriceFromPancakeswap(this.WHISKEY);
+        tokenPrice = (Number(tokenPrice) / Number(priceOfOneFtmInDollars)).toString();
       }
     }
     return tokenPrice;
