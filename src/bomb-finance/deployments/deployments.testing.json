@@ -3612,7 +3612,7 @@
     ]
   },
   "BombRewardPool": {
-    "address": "0x31CFb91FF0e6b4F6aaCf0C6fb4eA50a1Fc6EDAe0",
+    "address": "0xCBEd50b9E076b61685A3aF33d100cB7f8ad8765d",
     "abi": [
       {
         "inputs": [

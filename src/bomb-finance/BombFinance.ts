@@ -112,7 +112,7 @@ export class BombFinance {
     // const priceOfOneBNB = await this.getWBNBPriceFromPancakeswap();
     const priceOfOneBTC = await this.getBTCBPriceFromPancakeswap();
     //const priceInDollars = await this.getTokenPriceFromPancakeswapBOMBUSD();
-    const priceOfBombInDollars = ((Number(priceInBTC) * Number(priceOfOneBTC)) / 1).toFixed(2);
+    const priceOfBombInDollars = (Number(priceInBTC) * Number(priceOfOneBTC)).toFixed(2);
     //console.log('priceOfBombInDollars', priceOfBombInDollars);
 
     return {
@@ -238,7 +238,7 @@ export class BombFinance {
 
   async getBombStatInEstimatedTWAP(): Promise<TokenStat> {
     const {Oracle, BombRewardPool} = this.contracts;
-    const expectedPrice = await Oracle.twap(this.BOURBONCAKE.address, ethers.utils.parseEther('1'));
+    const expectedPrice = await Oracle.twap(this.BOURBONCAKE.address, ethers.utils.parseEther('10000000000000000'));
 
     const supply = await this.BOURBONCAKE.totalSupply();
     const bombRewardPoolSupply = await this.BOURBONCAKE.balanceOf(BombRewardPool.address);
@@ -459,7 +459,7 @@ export class BombFinance {
       const token = this.externalTokens[bankInfo.depositTokenName];
       const tokenPrice = await this.getDepositTokenPriceInDollars(bankInfo.depositTokenName, token);
       const tokenAmountInPool = await token.balanceOf(pool.address);
-      const value = Number(getDisplayBalance(tokenAmountInPool, token.decimal)) / Number(tokenPrice);
+      const value = Number(getDisplayBalance(tokenAmountInPool, token.decimal)) * Number(tokenPrice);
       const poolValue = Number.isNaN(value) ? 0 : value;
       totalValue += poolValue;
     }
