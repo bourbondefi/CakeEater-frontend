@@ -136,9 +136,14 @@ const Nav = () => {
              {/* <Link to="/xbomb" className={'navLink ' + classes.link}>
                 xBOMB
               </Link> */}
-              <Link to="/bond" className={'navLink ' + classes.link}>
-                Bond
-              </Link>
+              <a
+                href="https://bourbondao.com/bonds"
+                className={'navLink ' + classes.link}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                BONDS
+              </a>
 
               {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
                 SBS
@@ -234,7 +239,15 @@ const Nav = () => {
                 <ListItemLink primary="Home" to="/" />
                 <ListItemLink primary="Farm" to="/farm" />
                 <ListItemLink primary="Boardroom" to="/boardroom" />
-                <ListItemLink primary="Bond" to="/bond" />
+                <a
+                href="https://bourbondao.com/bonds"
+                className={'navLink ' + classes.link}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                BOND
+
+              </a>
                 <a
                 href="https://bourbondao.com/bonds"
                 className={'navLink ' + classes.link}
@@ -242,6 +255,7 @@ const Nav = () => {
                 target="_blank"
               >
                 DAO
+
               </a>
               <a
                 href="https://bourbondefi.gitbook.io/bourbon-finance/"
@@ -250,6 +264,7 @@ const Nav = () => {
                 target="_blank"
               >
                 DOCS
+
               </a>
                 {/* <ListItemLink primary="SBS" to="/sbs" /> */}
                 {/* <ListItemLink primary="Liquidity" to="/liquidity" /> */}
