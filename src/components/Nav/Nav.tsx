@@ -144,6 +144,14 @@ const Nav = () => {
               >
                 BONDS
               </a>
+              <a
+                href="https://captainsfarm.bourbondefi.com"
+                className={'navLink ' + classes.link}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                EARN BUSD
+              </a>
 
               {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
                 SBS
@@ -155,7 +163,7 @@ const Nav = () => {
                 Regulations
               </Link> */}
               <a
-                href="https://bourbondao.com/bonds"
+                href="https://bourbondao.com/"
                 className={'navLink ' + classes.link}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -239,33 +247,46 @@ const Nav = () => {
                 <ListItemLink primary="Home" to="/" />
                 <ListItemLink primary="Farm" to="/farm" />
                 <ListItemLink primary="Boardroom" to="/boardroom" />
+                <ListItem>
+                <a
+                href="https://captainsfarm.bourbondefi.com"
+                className={'navLink ' + classes.link}
+                rel="noopener noreferrer"
+                target="_blank"
+                >
+                EARN BUSD
+                </a>
+                </ListItem>
+                <ListItem>
                 <a
                 href="https://bourbondao.com/bonds"
                 className={'navLink ' + classes.link}
                 rel="noopener noreferrer"
                 target="_blank"
-              >
+                >
                 BOND
-
-              </a>
+                </a>
+                </ListItem>
+                <ListItem>
                 <a
-                href="https://bourbondao.com/bonds"
+                href="https://bourbondao.com/"
                 className={'navLink ' + classes.link}
                 rel="noopener noreferrer"
                 target="_blank"
-              >
+                >
                 DAO
-
-              </a>
-              <a
+                </a>
+                </ListItem>
+                <ListItem>
+                <a
                 href="https://bourbondefi.gitbook.io/bourbon-finance/"
                 className={'navLink ' + classes.link}
                 rel="noopener noreferrer"
                 target="_blank"
-              >
+                >
                 DOCS
-
-              </a>
+                </a>
+                </ListItem>
                 {/* <ListItemLink primary="SBS" to="/sbs" /> */}
                 {/* <ListItemLink primary="Liquidity" to="/liquidity" /> */}
                 {/* <ListItemLink primary="Regulations" to="/regulations" /> */}
