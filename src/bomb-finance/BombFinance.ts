@@ -473,7 +473,7 @@ export class BombFinance {
     const boardroomTVL = Number(getDisplayBalance(boardroomtShareBalanceOf, this.BSHARE.decimal)) * Number(BSHAREPrice);
     const bombTVL = Number(getDisplayBalance(bombStakeBalanceOf, this.BOURBONCAKE.decimal)) * Number(BOMBPrice);
 
-    return totalValue + boardroomTVL + bombTVL;
+    return totalValue + boardroomTVL;
   }
 
   /**
